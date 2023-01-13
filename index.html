@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bora Codar | Desafio #01</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="./js/main.js" defer></script>
+  <script src="./js/granim.min.js"></script>
+</head>
+
+<body>
+  <main class="container">
+    <canvas id="granim-canvas"></canvas>
+    <div class="wrapper">
+      <h1>Falaaa Dev! Dá o play e vamo codar!</h1>
+      <div class="leftPlayer">
+        <img src="./assets/folder.svg" alt="">
+
+        <div class="info">
+          <strong>Acorda Devinho</strong>
+          <span>Rocketseat</span>
+        </div>
+
+        <div class="controls">
+          <button class="previous"><i class="fa-solid fa-backward"></i></button>
+          <button class="play"><i class="fa-solid fa-play"></i></button>
+          <button class="next"><i class="fa-solid fa-forward"></i></button>
+        </div>
+
+        <div class="timeline">
+          <div class="progress">
+            <div class="progressToFinish"></div>
+          </div>
+          <div class="time">
+            <span class="fullTime">03:20</span>
+            <span class="timeToFinish">0:12</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rightPlayer">
+        <div class="playerWithProgress">
+          <div class="musicInfo">
+            <div class="info">
+              <strong>Acorda Devinho</strong>
+              <span>Rocketseat</span>
+            </div>
+
+            <img src="./assets/folder.svg" alt="">
+          </div>
+
+          <div class="controls">
+            <button class="previous"><i class="fa-solid fa-backward"></i></button>
+            <button class="play"><i class="fa-solid fa-play"></i></button>
+            <button class="next"><i class="fa-solid fa-forward"></i></button>
+          </div>
+
+          <div class="timeline">
+            <div class="progress">
+              <div class="progressToFinish"></div>
+            </div>
+            <div class="time">
+              <span class="fullTime">03:20</span>
+              <span class="timeToFinish">0:12</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="playerWithoutProgress">
+          <div class="musicInfo">
+            <img src="./assets/folder.svg" alt="">
+
+            <div class="info">
+              <strong>Acorda Devinho</strong>
+              <span>Rocketseat</span>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button class="previous"><i class="fa-solid fa-backward"></i></button>
+            <button class="play"><i class="fa-solid fa-play"></i></button>
+            <button class="next"><i class="fa-solid fa-forward"></i></button>
+          </div>
+        </div>
+      </div>
+      <ul class="social">
+        <li><a href="https://www.instagram.com/mather.alvs/" target="_blank">Instagram</a></li> |
+        <li><a href="https://github.com/matheralvs" target="_blank">Github</a></li> |
+        <li><a href="https://www.linkedin.com/feed/" target="_blank">Linkedin</a></li>
+      </ul>
+    </div>
+  </main>
+</body>
+
+</html>

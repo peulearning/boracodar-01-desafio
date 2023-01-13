@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+:root {
+  /* colors */
+  --background: #121214;
+  --bg-card: #7159c1;
+  --content: #ffffff;
+}
+
+:focus {
+  outline: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 20, 18, 1) 0%,
+    rgba(39, 26, 69, 1) 100%
+  );
+  color: white;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#granim-canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -999;
+}
+
+.wrapper {
+  width: 656px;
+  margin: 0 auto;
+
+  transform: translate(0);
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.wrapper h1 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: calc(100% + 2rem);
+  opacity: 1;
+  transition: opacity 1s, transform 1s;
+  transform: translateY(0);
+}
+
+.wrapper h1.hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.leftPlayer {
+  background-color: var(--bg-card);
+  padding: 2.375rem;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 25%);
+  border: 1px solid rgba(194, 166, 255, 0.5);
+  transition: transform 0.4s ease;
+}
+
+.leftPlayer:hover {
+  transform: translateY(-5px);
+}
+
+.leftPlayer img {
+  width: 100%;
+  height: 11.875rem;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.info strong {
+  color: var(--content);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.info span {
+  color: var(--content);
+  opacity: 0.67;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.125rem;
+}
+
+.controls button {
+  background-color: transparent;
+  border: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.controls button i {
+  font-size: 1.5rem;
+  color: var(--content);
+}
+
+.timeline {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.timeline .progress {
+  width: 100%;
+  height: 0.375rem;
+  background-color: rgba(255, 255, 255, 30%);
+  border-radius: 10px;
+}
+
+.progress .progressToFinish {
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 80%);
+  border-radius: 10px;
+}
+
+.time {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.625rem;
+}
+
+.time span {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 70%);
+}
+
+.rightPlayer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.playerWithProgress,
+.playerWithoutProgress {
+  background-color: var(--bg-card);
+  padding: 1.75rem;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 25%);
+  border: 1px solid rgba(194, 166, 255, 0.5);
+
+  transition: transform 0.4s ease;
+}
+
+.playerWithProgress:hover,
+.playerWithoutProgress:hover {
+  transform: translateY(-5px);
+}
+
+.musicInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+}
+
+.musicInfo img {
+  width: 5.25rem;
+  height: 5.25rem;
+  border-radius: 6px;
+}
+
+.social {
+  width: 100%;
+  position: absolute;
+  top: calc(100% + 2rem);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: var(--content);
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.social.hidden {
+  opacity: 1;
+}
+
+.social a {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--content);
+
+  transition: color 0.2s ease;
+}
+
+.social a:hover {
+  color: var(--bg-card);
+}
+
+@media (max-width: 645px) {
+  #granim-canvas {
+    display: none;
+  }
+
+  .container {
+    height: 100%;
+    margin: 7rem auto;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 365px) {
+  .wrapper {
+    padding: 0 1rem;
+  }
+
+  .wrapper h1 {
+    text-align: center;
+  }
+
+  .social {
+    padding: 0 1rem;
+  }
+}
