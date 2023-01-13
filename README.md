@@ -26,7 +26,8 @@ Primeiro projeto dos desafios semanais, o #boracodar é um espaço para mostrar 
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- ReactJS
+- HTML
+- CSS
 - JavaScript
 - Git e Github
 - Figma
@@ -35,7 +36,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Sempre na quarta-feira, às 11h, vai ser liberado um novo desafio no site boracodar.dev.
 
-- [Acesse o projeto finalizado, online](https://bora-codar-one.vercel.app/)
+- [Acesse o projeto finalizado, online](https://boracodar-01-desafio.vercel.app/)
 
 ## 🔖 Layout
 
